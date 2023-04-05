@@ -197,7 +197,7 @@ class CameraViewController: UIViewController {
     
     func addNavigationBar() {
         DispatchQueue.main.async {
-            self.view.addSubview(self.backButton)
+            // self.view.addSubview(self.backButton)
             self.view.addSubview(self.flashButton)
         }
     }
@@ -236,38 +236,38 @@ class CameraViewController: UIViewController {
         return flashBtn
     }()
     
-    lazy var backButton: UIButton = {
-        let backBtn = UIButton(
-            frame: CGRect(
-                x: 30,
-                y: 55,
-                width: 17 + 30,
-                height: 17 + 10
-            )
-        )
+    // lazy var backButton: UIButton = {
+    //     let backBtn = UIButton(
+    //         frame: CGRect(
+    //             x: 30,
+    //             y: 55,
+    //             width: 17 + 30,
+    //             height: 17 + 10
+    //         )
+    //     )
         
-        backBtn.setImage(
-            UIImage(
-                named: "backButton"
-            ),
-            for: .normal
-        )
+    //     backBtn.setImage(
+    //         UIImage(
+    //             named: "backButton"
+    //         ),
+    //         for: .normal
+    //     )
         
-        backBtn.addTarget(
-            self,
-            action: #selector(selectorBackButton),
-            for: .touchUpInside
-        )
+    //     backBtn.addTarget(
+    //         self,
+    //         action: #selector(selectorBackButton),
+    //         for: .touchUpInside
+    //     )
         
-        backBtn.contentEdgeInsets = UIEdgeInsets(
-            top: 0.0,
-            left: 0.0,
-            bottom: 10.0,
-            right: 30.0
-        )
+    //     backBtn.contentEdgeInsets = UIEdgeInsets(
+    //         top: 0.0,
+    //         left: 0.0,
+    //         bottom: 10.0,
+    //         right: 30.0
+    //     )
         
-        return backBtn
-    }()
+    //     return backBtn
+    // }()
     
     @objc func selectorFlashLightButton() {
         guard let device = AVCaptureDevice.default(for: AVMediaType.video) else {
@@ -285,7 +285,7 @@ class CameraViewController: UIViewController {
     
     @objc func selectorBackButton() {
         DispatchQueue.main.async {
-            self.dismiss(animated: true, completion: nil)
+            // self.dismiss(animated: true, completion: nil)
         }
     }
     
