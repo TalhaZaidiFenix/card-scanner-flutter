@@ -42,7 +42,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
   lateinit var animator: ObjectAnimator
   lateinit var scannerLayout: View
   lateinit var scannerBar: View
-  lateinit var backButton: View
+  // lateinit var backButton: View
 
   override fun onCreate(savedInstanceState: Bundle?) {
     super.onCreate(savedInstanceState)
@@ -51,13 +51,13 @@ class CardScannerCameraActivity : AppCompatActivity() {
 
     scannerLayout = findViewById(R.id.scannerLayout);
     scannerBar = findViewById(R.id.scannerBar);
-    backButton = findViewById(R.id.backButton)
+    // backButton = findViewById(R.id.backButton)
     supportActionBar?.hide();
 
     val vto = scannerLayout.viewTreeObserver;
-    backButton.setOnClickListener {
-      finish()
-    }
+    // backButton.setOnClickListener {
+    //   finish()
+    // }
     vto.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
       override fun onGlobalLayout() {
         scannerLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
