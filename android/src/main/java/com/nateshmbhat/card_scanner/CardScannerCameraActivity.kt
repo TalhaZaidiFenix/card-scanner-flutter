@@ -55,9 +55,9 @@ class CardScannerCameraActivity : AppCompatActivity() {
     supportActionBar?.hide();
 
     val vto = scannerLayout.viewTreeObserver;
-    // backButton.setOnClickListener {
-    //   finish()
-    // }
+     backButton.setOnClickListener {
+       onBackPressed()
+     }
     vto.addOnGlobalLayoutListener(object : OnGlobalLayoutListener {
       override fun onGlobalLayout() {
         scannerLayout.viewTreeObserver.removeOnGlobalLayoutListener(this)
