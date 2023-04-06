@@ -185,7 +185,11 @@ class CardScannerCameraActivity : AppCompatActivity() {
   }
 
   override fun onBackPressed() {
-    super.onBackPressed()
-    // setResult(Activity.RESULT_CANCELED)
+    setResult(Activity.RESULT_CANCELED)
+    try{
+      super.onBackPressed()
+    }catch(e: NullPointerException){
+      Log.d("NullPointerException")
+    }
   }
 }
