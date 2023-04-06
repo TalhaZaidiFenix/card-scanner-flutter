@@ -155,7 +155,7 @@ class CameraViewController: UIViewController {
     
     func addScanControlsAndIndicators() {
         addCornerClips()
-        addScanYourCardToProceedLabel()
+        // addScanYourCardToProceedLabel()
         // addNavigationBar()
     }
     
@@ -283,11 +283,11 @@ class CameraViewController: UIViewController {
         }
     }
     
-    @objc func selectorBackButton() {
-        DispatchQueue.main.async {
-            // self.dismiss(animated: true, completion: nil)
-        }
-    }
+    // @objc func selectorBackButton() {
+    //     DispatchQueue.main.async {
+    //         // self.dismiss(animated: true, completion: nil)
+    //     }
+    // }
     
     func addAnimatingScanLine() {
         

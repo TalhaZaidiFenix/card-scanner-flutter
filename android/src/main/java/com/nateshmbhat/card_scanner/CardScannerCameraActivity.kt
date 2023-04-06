@@ -185,7 +185,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
   }
 
   override fun onBackPressed() {
-    setResult(Activity.RESULT_CANCELED)
     super.onBackPressed()
+    // setResult(Activity.RESULT_CANCELED)
   }
 }
