@@ -189,7 +189,7 @@ class CardScannerCameraActivity : AppCompatActivity() {
     try{
       super.onBackPressed()
     }catch(e: NullPointerException){
-      Log.d("NullPointerException")
+      Log.d("Exception","NullPointerException")
     }
   }
 }
