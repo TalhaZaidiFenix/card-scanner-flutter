@@ -286,7 +286,7 @@ class CameraViewController: UIViewController {
     @objc func selectorBackButton() {
         DispatchQueue.main.async {
             // self.dismiss(animated: true, completion: nil)
-            stopScanning()
+            self.stopScanning()
         }
     }
     
